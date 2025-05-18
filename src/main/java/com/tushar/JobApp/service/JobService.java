@@ -14,11 +14,11 @@ public class JobService {
 	@Autowired
 	private JobRepo repo;
 	
-	public void addJob(JobPost jobpost) {
-		repo.addJob(jobpost);
+	public void addJob(JobPost jobpost) { 
+		repo.save(jobpost);
 	}
 	
 	public List<JobPost>getAllJobs(){
-		return repo.getAllJobs();
+		return repo.findAll();
 	}
 }
